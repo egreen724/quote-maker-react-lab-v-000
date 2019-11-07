@@ -7,10 +7,7 @@ export default function quotes(state = [], action) {
       };
 
     case "REMOVE_QUOTE":
-      return {
-        ...state,
-        books: [...state.books.slice(0, idx), ...state.books.slice(idx + 1)]
-      };
+      return state.filter(quote => quote.id !== action.quoteId);
 
     case "UPVOTE_QUOTE":
       return {
