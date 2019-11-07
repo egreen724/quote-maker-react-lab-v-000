@@ -3,8 +3,7 @@ export default function quotes(state = [], action) {
   switch (action.type) {
     case "ADD_QUOTE":
       return {
-        ...state,
-        books: [...state.books, action.book]
+        ...state, {...state.quotes, action.quote }
       };
 
     case "REMOVE_QUOTE":
