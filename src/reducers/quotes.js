@@ -10,15 +10,13 @@ export default function quotes(state = [], action) {
 
     case "UPVOTE_QUOTE":
       return {
-        ...state,
-        authors: [...state.authors, action.author]
+      
       };
 
     case "DOWNVOTE_QUOTE":
       
       return {
-        ...state,
-        authors: [...state.authors.slice(0, idx), ...state.authors.slice(idx + 1)]
+        
       };
 
     default:
